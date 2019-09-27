@@ -105,9 +105,9 @@ def display():
             print()
 
 def autoHandle():
-    dfolder = 'G:/Users/Jozhus/Desktop/Files/Downloads'
-    cidpath = 'G:/Users/Jozhus/Documents/Python/data'
-    deluge = 'G:/Program Files (x86)/Deluge/deluge-console.exe'
+    dfolder = 'Downloads' #Files in this folder with the '.torrent' extension will automatically be added.
+    cidpath = 'data'
+    deluge = 'G:/Program Files (x86)/Deluge/deluge-console.exe' #Deluge console path
     toadd = [x for x in os.listdir(dfolder) if ".torrent" in x]
     if not os.path.isfile(cidpath + '/torrentids.txt'):
             file = open(cidpath + '/torrentids.txt', 'w')
